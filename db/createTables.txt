@@ -1,0 +1,36 @@
+DROP TABLE IF EXISTS rki_update;
+
+CREATE TABLE rki_update
+(
+   id         INT        NOT NULL,
+   zeitpunkt  DATETIME,
+   PRIMARY KEY (id)
+)
+ENGINE=InnoDB;
+
+
+DROP TABLE IF EXISTS rki;
+
+CREATE TABLE rki
+(
+   objectid              INT            NOT NULL,
+   gen                   VARCHAR(200),
+   bez                   VARCHAR(200),
+   ags                   VARCHAR(10),
+   ewz                   VARCHAR(100),
+   kfl                   VARCHAR(100),
+   death_rate            VARCHAR(100),
+   cases                 INT,
+   deaths                INT,
+   cases_per_100k        VARCHAR(100),
+   cases_per_population  VARCHAR(100),
+   bl                    VARCHAR(100),
+   bl_id                 INT,
+   county                VARCHAR(100),
+   last_update_id        INT            NOT NULL,
+   cases7_per_100k       VARCHAR(100),
+   recoverd              INT,
+   PRIMARY KEY (objectid, last_update_id)
+)
+ENGINE=InnoDB;
+
