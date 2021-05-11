@@ -16,7 +16,7 @@ public class SyncJob {
     private JsonParser parser;
     private DBService db;
 
-    @Scheduled(cron = "0 0 2 * * *")
+    @Scheduled(cron = "0 0 13 00 * *")
     public void run() throws IOException {
         setup();
         List<RKI> list = parser.parse(api.getJson());
