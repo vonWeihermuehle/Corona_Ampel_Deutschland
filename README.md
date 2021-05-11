@@ -1,8 +1,8 @@
 # Corona Ampel Deutschland
 ## Ziel war es eine eigene App zu entwickeln um die aktuellen Corona Zahlen kompakt in einer Übersicht zu haben.
 
-Das Backend wurde mit Spring Boot erstellt. Es werden einmal täglich die Zahlen von der Offiziellen Corona-Zahlen-Api abgeholt und in einer DB gespeichert.
-Bei jedem Start der App wird in der eigenen Datenbank geprüft, ob es aktualisiert Daten gibt. Falls ja, werden diese am Mobilgerät ebenfalls aktualisiert
+Das Backend wurde mit Spring Boot erstellt. Es werden einmal täglich um 13:00 Uhr die aktuellen Inzidenz-Zahlen von der Offiziellen Corona-Zahlen-Api abgeholt und in einer DB gespeichert.
+Bei jedem Start der App wird, in der eigenen Datenbank geprüft und daher der Traffic auf die offizielle API reduziert, ob es aktualisiert Daten gibt. Falls ja, werden diese am Mobilgerät ebenfalls aktualisiert.
 
 <p align="center">
   <img src="https://github.com/vonWeihermuehle/Corona_Ampel_Deutschland/blob/main/screenshots/Screenshot_1620753399.png" width="250">
